@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "neil";
 $password = "";
-$datbase = "exercise";
+$datbase = "borlongan";
 mysql_connect($host,$user,$password);
-mysql_select_db($datbase);
+mysql_select_db($database);
 ?>
