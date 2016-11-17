@@ -3,6 +3,6 @@ $host = "localhost";
 $user = "neil";
 $password = "";
 $datbase = "borlongan";
-mysql_connect($host,$user,$password);
-mysql_select_db($database);
+mysqli_connect($host,$user,$password);
+mysqli_select_db($database);
 ?>
