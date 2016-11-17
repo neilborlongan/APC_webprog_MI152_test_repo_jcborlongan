@@ -3,8 +3,8 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $name = $_POST['first_name'];
- $nickname = $_POST['last_name'];
+ $name = $_POST['complete_name'];
+ $nickname = $_POST['nickname'];
  $home_address = $_POST['city_name'];
   $gender = $_POST['city_name'];
    $gender = $_POST['male_or_female'];
