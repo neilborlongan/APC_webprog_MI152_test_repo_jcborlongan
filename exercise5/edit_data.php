@@ -9,9 +9,11 @@ if(isset($_GET['edit_id']))
 if(isset($_POST['btn-update']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $name = $_POST['complete_name'];
+ $nickname = $_POST['nickname'];
+ $home_address = $_POST['city_name'];
+ $gender = $_POST['city_name'];
+ $gender = $_POST['male_or_female'];
  // variables for input data
 
  // sql query for update data into database

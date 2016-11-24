@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "neil";
 $password = "";
-$datbase = "borlongan";
-mysqli_connect($host,$user,$password,$datbase);
-mysqli_select_db($datbase);
+$datbase = "exercise;
+mysql_connect($host,$user,$password);
+mysql_select_db($datbase);
 ?>
