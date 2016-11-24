@@ -40,24 +40,21 @@ if(isset($_POST['btn-update']))
  }
  // sql query execution function
 }
-if(isset($_POST['btn-cancel']))
-{
- header("Location: index.php");
-}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>edit page</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body>
+<body style="background-image: url (bg.jpg);">
 <center>
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>edit now</label>
     </div>
 </div>
 
@@ -66,14 +63,20 @@ if(isset($_POST['btn-cancel']))
     <form method="post">
     <table align="center">
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    <td><input type="text" name="complete_name" placeholder="complete_name" value="<?php echo $fetched_row['complete_name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+    <td><input type="text" name="nickname" placeholder="nickname" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="email" placeholder="email address" value="<?php echo $fetched_row['email']; ?>" required /></td>
     </tr>
+	<tr>
+	<td>
+	<input type="radio" name ="gender <?php if (isset ($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="Female">Female
+	<input type="radio" name ="gender <?php if (isset ($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="Male">Male
+	</td>
+	</tr>
     <tr>
     <td>
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
