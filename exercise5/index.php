@@ -15,8 +15,28 @@ if(isset($_GET['delete_id']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>Database</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
+<style>
+div.container {
+    width: 99%;
+    height: 100%;
+    border: 10px solid black;
+}
+header, footer {
+    padding: 1em;
+    color: black;
+    background-color: black;
+    clear: left;
+    text-align: center;
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 2em;
+    overflow: hidden;
+	}
+</style>
 <script type="text/javascript">
 function edt_id(id)
 {
@@ -34,12 +54,12 @@ function delete_id(id)
 }
 </script>
 </head>
-<body>
+<body style="background-image: url(background.jpg);">
 <center>
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - <a href="http://cleartuts.blogspot.com" target="_blank">By Cleartuts</a></label>
+    <label>Database</label>
     </div>
 </div>
 
@@ -47,14 +67,15 @@ function delete_id(id)
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="9"><a href="add_data.php">add data here.</a></th>
     </tr>
-	<th>ID</th>
-    <th>Name</th>
+    <th>Complete Name</th>
     <th>Nickname</th>
-    <th>Home Address</th>
+    <th>Email Address</th>
+	<th>Address</th>
 	<th>Gender</th>
-	<th>Cellphone</th>
+	<th>Cellphone Number</th>
+	<th>Comment</th>
     <th colspan="2">Operations</th>
     </tr>
     <?php
@@ -67,6 +88,10 @@ function delete_id(id)
         <td><?php echo $row[1]; ?></td>
         <td><?php echo $row[2]; ?></td>
         <td><?php echo $row[3]; ?></td>
+		<td><?php echo $row[4]; ?></td>
+		<td><?php echo $row[5]; ?></td>
+		<td><?php echo $row[6]; ?></td>
+		<td><?php echo $row[7]; ?></td>
   <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
         </tr>

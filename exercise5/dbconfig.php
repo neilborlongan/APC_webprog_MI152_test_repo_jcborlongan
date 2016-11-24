@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "neil";
+$user = "root";
 $password = "";
-$datbase = "exercisefive";
+$datbase = "dataform";
 mysql_connect($host,$user,$password);
 mysql_select_db($datbase);
 ?>
