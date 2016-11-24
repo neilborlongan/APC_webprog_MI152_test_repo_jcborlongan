@@ -56,13 +56,13 @@
     <th></th>
     <th></th>
     <th></th>
-    <td>Playing Guitar<br>
+    <td>Playing guitar<br>
     <img src="cook.jpg" style="width:400px;height:300px;"> <br>
     </td>
     <th></th>
     <th></th>
     <th></th>
-    <td>Watching movies <br>
+    <td>Watching movies<br>
     <img src="travel.jpg" style="width:400px;height:300px;"> <br>
     </td>
     <th></th>
@@ -136,19 +136,19 @@
 
 <h3>Where did I grew?</h3>	
 <p id="t3" style="display:none">
-<br>In Valenzuela City.
+<br> In Valenzuela City.
 </p>
 <button type="button" onclick="document.getElementById('t3').style.display='block'">CLICK THIS!</button>
 
 <h3>My fathers name</h3>	
 <p id="t4" style="display:none">
-<br>Christopher borlongan
+<br> Christopher borlongan
 </p>
 <button type="button" onclick="document.getElementById('t4').style.display='block'">CLICK THIS!</button>
 
 <h3>My mothers name</h3>
 <p id="t5" style="display:none">
-<br>Elsa Carlos
+<br> Elsa Carlos
 <button type="button" onclick="document.getElementById('t5').style.display='block'">CLICK THIS!</button>
 
 <div id="form">
