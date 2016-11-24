@@ -72,11 +72,20 @@ if(isset($_POST['btn-update']))
     <td><input type="text" name="email" placeholder="email address" value="<?php echo $fetched_row['email']; ?>" required /></td>
     </tr>
 	<tr>
+    <td><input type="text" name="address" placeholder="Home address" value="<?php echo $fetched_row['address']; ?>" required /></td>
+    </tr>
+	<tr>
 	<td>
 	<input type="radio" name ="gender <?php if (isset ($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="Female">Female
 	<input type="radio" name ="gender <?php if (isset ($gender) && $gender=="female") echo $fetched_row['gender']; ?> value="Male">Male
 	</td>
 	</tr>
+	<tr>
+    <td><input type="text" name="cellnumber" placeholder="Cellphone number" value="<?php echo $fetched_row['cellnumber']; ?>" required /></td>
+    </tr>
+	<td>Commnet:<br>
+	<textarea name="comment" rows="10" cols="144"><?php echo $fetched_row['comment']; ?></textarea>
+	
     <tr>
     <td>
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
