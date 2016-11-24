@@ -1,39 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
 include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $name = $_POST['complete_name'];
+ $complete_name = $_POST['complete_name'];
  $nickname = $_POST['nickname'];
- $home_address = $_POST['city_name'];
-  $gender = $_POST['city_name'];
-   $gender = $_POST['male_or_female'];
+ $email = $_POST['email'];
+  $address = $_POST['address'];
+   $gender = $_POST['gender'];
+   $cellnumber = $_POST['cellnumber'];
+   $comment = $_POST['comment'];
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$complete_name','$nickname','$email','$address','$gender','$cellnumber','$comment')";
  // sql query for inserting data into database
  
  // sql query execution function
- if(mysql_query($sql_query))
- {
-  ?>
-  <script type="text/javascript">
-  alert('Data Are Inserted Successfully ');
-  window.location.href='index.php';
-  </script>
-  <?php
- }
- else
- {
-  ?>
-  <script type="text/javascript">
-  alert('error occured while inserting your data');
-  </script>
-  <?php
- }
- // sql query execution function
-}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -58,13 +43,24 @@ if(isset($_POST['btn-save']))
     <td align="center"><a href="index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    <td><input type="text" name="complete_namename" placeholder="complete_nameName" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    <td><input type="text" name="nickname" placeholder="nickName" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    <td><input type="text" name="email" placeholder="email" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="gender" placeholder="gender" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="address" placeholder="address" required /></td>
+    </tr><tr>
+    <td><input type="text" name="cellnumber" placeholder="cellnumber" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="comment" placeholder="comment" required /></td>
     </tr>
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
