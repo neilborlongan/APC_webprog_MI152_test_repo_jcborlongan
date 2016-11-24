@@ -81,7 +81,7 @@ function delete_id(id)
     <?php
  $sql_query="SELECT * FROM users";
  $result_set=mysqli_query($sql_query);
- while($row=mysql_fetch_row($result_set))
+ while($row=mysqli_fetch_row($result))
  {
   ?>
         <tr>
