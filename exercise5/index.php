@@ -1,3 +1,16 @@
+<?php
+include_once 'dbconfig.php';
+
+// delete condition
+if(isset($_GET['delete_id']))
+{
+ $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+ mysqli_query($link, $sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+
 <html>
 
 <head>
@@ -6,21 +19,58 @@
 
 <link rel="stylesheet" type="text/css" href="Css.css">
 
-<h1><center><a href="mydata.php">SQL</a></h1></center>
+<h1><a href="mydata.php">SQL</a></h1>
 <style>
 #form {
 	font-size: 18px;
 	font-weight: bold;
 	color: white;
 }
-
 .error {
 	color: red;
 }
-
 table { color : white;
 }
+
+div.container {
+    width: 99%;
+    height: 100%;
+    border: 10px solid black;
+}
+header, footer {
+    padding: 1em;
+    color:lightblue;
+    background-color: black;
+    clear: left;
+    text-align: center;
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 2em;
+    overflow: hidden;
+	}
+	.center {
+		 height: 200px;
+		 width: 200px;
+	}
 </style>
+<script type="text/javascript">
+function edt_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_data.php?edit_id='+id;
+ }
+}
+function delete_id(id)
+{
+ if(confirm('Sure to Delete ?'))
+ {
+  window.location.href='mydata.php?delete_id='+id;
+ }
+}
+</script>
 </head>
 <hr>
 <body style="background-image: url(bg.jpg);">
@@ -125,7 +175,7 @@ table { color : white;
    <tr>
    </tr>   
 </table>
-<center>
+
 <h3>What was my favorite pet?</h3>	
 <p id="t1" style="display:none">
 <br>My favorite pet was dog.
@@ -152,58 +202,22 @@ table { color : white;
 
 <h3>My mothers name</h3>
 <p id="t5" style="display:none">
-<p class="a"id="five"></p>
+<br> Elsa Carlos
+<button type="button" onclick="document.getElementById('t5').style.display='block'">CLICK THIS!</button>
 
-<button type="button" onclick="document.getElementById('five').innerHTML = 'Elsa Carlos'">Click Me!</button><br>
-</center>
-//////////////////////////
+<div id="form">
 
-<?php
-include_once 'dbconfig.php';
-
-// delete condition
-if(isset($_GET['delete_id']))
-{
- $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysqli_query($link, $sql_query);
- header("Location: $_SERVER[PHP_SELF]");
-}
-// delete condition
-?>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link rel="stylesheet" href="style.css" type="text/css" />
-
-<script type="text/javascript">
-function edt_id(id)
-{
- if(confirm('Sure to edit ?'))
- {
-  window.location.href='edit_data.php?edit_id='+id;
- }
-}
-function delete_id(id)
-{
- if(confirm('Sure to Delete ?'))
- {
-  window.location.href='mydata.php?delete_id='+id;
- }
-}
-</script>
-
-<center>
-    <table align="center">
-<div id="header">
- <div id="content">
-		<label>Database</label>
-    </div>
 </div>
 
+<center>
+<div id="header">
+ <div id="content">
+    <label>Database</label>
+    </div>
+</div>
 <div id="body">
  <div id="content">
-
+    <table align="center">
     <tr>
     <th colspan="9"><a href="add_data.php">add data here.</a></th>
     </tr>
@@ -216,8 +230,7 @@ function delete_id(id)
 	<th>Comment</th>
     <th colspan="2">Operations</th>
     </tr>
-    
-	<?php
+    <?php
  $sql_query="SELECT * FROM users";
  $result_set=mysqli_query($link, $sql_query);
  while($row=mysqli_fetch_row($result_set))
@@ -238,14 +251,10 @@ function delete_id(id)
  }
  ?>
     </table>
-	
     </div>
 </div>
 
 </center>
-
-
-
 </body>
 
 </html>
