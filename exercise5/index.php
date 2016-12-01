@@ -125,7 +125,7 @@ table { color : white;
    <tr>
    </tr>   
 </table>
-
+<center>
 <h3>What was my favorite pet?</h3>	
 <p id="t1" style="display:none">
 <br>My favorite pet was dog.
@@ -152,12 +152,98 @@ table { color : white;
 
 <h3>My mothers name</h3>
 <p id="t5" style="display:none">
-<br> Elsa Carlos
-<button type="button" onclick="document.getElementById('t5').style.display='block'">CLICK THIS!</button>
+<p class="a"id="five"></p>
 
-<div id="form">
+<button type="button" onclick="document.getElementById('five').innerHTML = 'Elsa Carlos'">Click Me!</button><br>
+</center>
+//////////////////////////
 
+<?php
+include_once 'dbconfig.php';
+
+// delete condition
+if(isset($_GET['delete_id']))
+{
+ $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+ mysqli_query($link, $sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<script type="text/javascript">
+function edt_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_data.php?edit_id='+id;
+ }
+}
+function delete_id(id)
+{
+ if(confirm('Sure to Delete ?'))
+ {
+  window.location.href='mydata.php?delete_id='+id;
+ }
+}
+</script>
+
+<center>
+    <table align="center">
+<div id="header">
+ <div id="content">
+		<label>Database</label>
+    </div>
 </div>
+
+<div id="body">
+ <div id="content">
+
+    <tr>
+    <th colspan="9"><a href="add_data.php">add data here.</a></th>
+    </tr>
+    <th>Complete Name</th>
+    <th>Nickname</th>
+    <th>Email Address</th>
+	<th>Address</th>
+	<th>Gender</th>
+	<th>Cellphone Number</th>
+	<th>Comment</th>
+    <th colspan="2">Operations</th>
+    </tr>
+    
+	<?php
+ $sql_query="SELECT * FROM users";
+ $result_set=mysqli_query($link, $sql_query);
+ while($row=mysqli_fetch_row($result_set))
+ {
+  ?>
+        <tr>
+        <td><?php echo $row[1]; ?></td>
+        <td><?php echo $row[2]; ?></td>
+        <td><?php echo $row[3]; ?></td>
+		<td><?php echo $row[4]; ?></td>
+		<td><?php echo $row[5]; ?></td>
+		<td><?php echo $row[6]; ?></td>
+		<td><?php echo $row[7]; ?></td>
+  <td align="center" ><a href="javascript:edt_id('<?php echo $row[0]; ?>')" ><img src="b_edit.png" align="EDIT" height="40s" width="40" /></a></td>
+  <td align="center" ><a href="javascript:delete_id('<?php echo $row[0]; ?>' )"><img src="b_drop.png" align="DELETE" height="40" width="40" /></a></td>
+        </tr>
+        <?php
+ }
+ ?>
+    </table>
+	
+    </div>
+</div>
+
+</center>
+
 
 
 </body>
