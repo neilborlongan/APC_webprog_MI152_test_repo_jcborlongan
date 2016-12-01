@@ -3,7 +3,7 @@ class users_model extends CI_Model {
 function __construct()
 {
 parent::__construct();
-$this->load->database("stud");
+$this->load->database("borlonganfive");
 }
 public function get_all_users()
 {
