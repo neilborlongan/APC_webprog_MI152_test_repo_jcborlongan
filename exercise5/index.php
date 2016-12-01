@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="Css.css">
 
-<h1><a href="mydata.php">SQL</a></h1>
+<h1><center><a href="mydata.php">SQL</a></h1></center>
 <style>
 #form {
 	font-size: 18px;
@@ -158,6 +158,8 @@ table { color : white;
 <div id="form">
 
 </div>
+
+
 </body>
 
 </html>
