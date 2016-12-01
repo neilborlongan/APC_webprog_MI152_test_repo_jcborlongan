@@ -25,7 +25,7 @@ div.container {
 }
 header, footer {
     padding: 1em;
-    color: black;
+    color:lightblue;
     background-color: black;
     clear: left;
     text-align: center;

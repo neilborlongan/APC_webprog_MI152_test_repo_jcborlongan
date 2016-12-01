@@ -16,6 +16,9 @@
 .error {
 	color: red;
 }
+
+table { color : white;
+}
 </style>
 </head>
 <hr>
