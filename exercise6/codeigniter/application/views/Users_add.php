@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url(http://localhost/exercise6/codeigniter/uploads/bg.jpg);">
 
 	<form method="post" action="<?php echo base_url();?>index.php/users/insert_users_db">
 	
@@ -28,10 +28,10 @@
     <td><input type="text" name="nickname" placeholder="Nickname" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="Email_Address" placeholder="Email Address" required /></td>
+    <td><input type="text" name="email" placeholder="Email Address" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="Home_Address" placeholder="Home Address" required /></td>
+    <td><input type="text" name="address" placeholder="Home Address" required /></td>
     </tr>
 	<tr>
     <td>
@@ -40,7 +40,7 @@
 	</td>
     </tr>
 	<tr>
-    <td><input type="number" name="cellphone" placeholder="Cellphone Number" required /></td>
+    <td><input type="number" name="cellnumber" placeholder="Cellphone Number" required /></td>
     </tr>
 	 <td>Comment: <br>
 	 <textarea name="comment" placeholder="Comment" rows="5" cols="50"></textarea>

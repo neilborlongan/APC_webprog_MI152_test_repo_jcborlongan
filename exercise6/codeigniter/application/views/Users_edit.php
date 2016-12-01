@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
 </head>
 
-<body>
+<body style="background-image: url(http://localhost/exercise6/codeigniter/uploads/bg.jpg);">
 
 <form method="post" action="<?php echo base_url();?>index.php/users/update">
 <?php
@@ -30,10 +30,10 @@ extract($users);
     <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $nickname; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="Email_Address" placeholder="Email Address" value="<?php echo $Email_Address; ?>" required /></td>
+    <td><input type="text" name="email" placeholder="Email Address" value="<?php echo $email; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="Home_Address" placeholder="Home Address" value="<?php echo $Home_Address; ?>" required /></td>
+    <td><input type="text" name="address" placeholder="Home Address" value="<?php echo $address; ?>" required /></td>
     </tr>
 	<tr>
     <td>
@@ -42,7 +42,7 @@ extract($users);
 	</td>
     </tr>
 	<tr>
-    <td><input type="number" name="cellphone" placeholder="Cellphone Number" value="<?php echo $cellphone; ?>" required /></td>
+    <td><input type="number" name="cellnumber" placeholder="Cellphone Number" value="<?php echo $cellnumber; ?>" required /></td>
     </tr>
 	 <td>Comment: <br>
 	 <textarea name="comment" rows="5" cols="50"><?php echo $comment; ?></textarea>

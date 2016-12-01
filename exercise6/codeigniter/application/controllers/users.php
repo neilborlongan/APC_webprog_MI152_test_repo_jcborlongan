@@ -22,10 +22,10 @@ public function insert_users_db()
 {
 $udata['complete_name'] = $this->input->post('complete_name');
 $udata['nickname'] = $this->input->post('nickname');
-$udata['Email_Address'] = $this->input->post('Email_Address');
-$udata['Home_Address'] = $this->input->post('Home_Address');
+$udata['email'] = $this->input->post('email');
+$udata['address'] = $this->input->post('address');
 $udata['gender'] = $this->input->post('gender');
-$udata['cellphone'] = $this->input->post('cellphone');
+$udata['cellnumber'] = $this->input->post('cellnumber');
 $udata['comment'] = $this->input->post('comment');
 $res = $this->users_model->insert_users_to_db($udata);
 if($res){
@@ -41,10 +41,10 @@ public function update()
 {
 $mdata['complete_name']=$_POST['complete_name'];
 $mdata['nickname']=$_POST['nickname'];
-$mdata['Email_Address']=$_POST['Email_Address'];
-$mdata['Home_Address']=$_POST['Home_Address'];
+$mdata['email']=$_POST['email'];
+$mdata['address']=$_POST['address'];
 $mdata['gender']=$_POST['gender'];
-$mdata['cellphone']=$_POST['cellphone'];
+$mdata['cellnumber']=$_POST['cellnumber'];
 $mdata['comment']=$_POST['comment'];
 $res=$this->users_model->update_info($mdata, $_POST['user_id']);
 if($res){

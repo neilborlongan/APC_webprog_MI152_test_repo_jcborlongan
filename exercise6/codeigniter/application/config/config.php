@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://127.0.0.1/neil/codeigniter/';
+$config['base_url'] = 'http://127.0.0.1/exercise6/codeigniter/';
 
 /*
 |--------------------------------------------------------------------------
@@ -191,28 +191,7 @@ $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
 
-/*
-|--------------------------------------------------------------------------
-| Error Logging Threshold
-|--------------------------------------------------------------------------
-|
-| You can enable error logging by setting a threshold over zero. The
-| threshold determines what gets logged. Threshold options are:
-|
-|	0 = Disables logging, Error logging TURNED OFF
-|	1 = Error Messages (including PHP errors)
-|	2 = Debug Messages
-|	3 = Informational Messages
-|	4 = All Messages
-|
-| You can also pass an array with threshold levels to show individual error types
-|
-| 	array(2) = Debug Messages, without Error Messages
-|
-| For a live site you'll usually only enable Errors (1) to be logged otherwise
-| your log files will fill up very fast.
-|
-*/
+
 $config['log_threshold'] = 0;
 
 /*
@@ -226,18 +205,7 @@ $config['log_threshold'] = 0;
 */
 $config['log_path'] = '';
 
-/*
-|--------------------------------------------------------------------------
-| Log File Extension
-|--------------------------------------------------------------------------
-|
-| The default filename extension for log files. The default 'php' allows for
-| protecting the log files via basic scripting, when they are to be stored
-| under a publicly accessible directory.
-|
-| Note: Leaving it blank will default to 'php'.
-|
-*/
+
 $config['log_file_extension'] = '';
 
 /*

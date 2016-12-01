@@ -24,8 +24,7 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 </script>
 </head>
 
-<body>
-<div id="body">
+<body style="background-image: url(http://localhost/exercise6/codeigniter/uploads/bg.jpg);">
 	<div id="content">
 		<table align="center">
 			<tr>
@@ -50,13 +49,13 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 
 				<td><?php echo $u_key->nickname; ?></td>
 
-				<td><?php echo $u_key->Email_Address; ?></td>
+				<td><?php echo $u_key->email; ?></td>
 
-				<td><?php echo $u_key->Home_Address; ?></td>
+				<td><?php echo $u_key->address; ?></td>
 				
 				<td><?php echo $u_key->gender; ?></td>
 				
-				<td><?php echo $u_key->cellphone; ?></td>
+				<td><?php echo $u_key->cellnumber; ?></td>
 				
 				<td><?php echo $u_key->comment; ?></td>
 
