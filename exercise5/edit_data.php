@@ -50,6 +50,7 @@ if(isset($_POST['btn-update']))
 <title>Edit Page</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
+
 <body style="background-image: url(background.jpg);">
 <center>
 

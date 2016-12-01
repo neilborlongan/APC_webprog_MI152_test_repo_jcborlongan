@@ -11,6 +11,7 @@
 #form {
 	font-size: 18px;
 	font-weight: bold;
+	color: white;
 }
 
 .error {
@@ -60,13 +61,13 @@ table { color : white;
     <th></th>
     <th></th>
     <td>Playing guitar<br>
-    <img src="cook.jpg" style="width:400px;height:300px;"> <br>
+    <img src="cook.jpg" style="width:400px;height:300px;" height: 200px; weight : 200px;> <br>
     </td>
     <th></th>
     <th></th>
     <th></th>
     <td>Watching movies<br>
-    <img src="travel.jpg" style="width:400px;height:300px;"> <br>
+    <img src="travel.jpg" style="width:400px;height:300px;"height: 200px; weight : 200px;> <br>
     </td>
     <th></th>
     <th></th>
@@ -84,13 +85,13 @@ table { color : white;
     <th></th>
     <th></th>
     <td>Mind games<br>
-    <img src="discover.jpg" style="width:400px;height:300px;"> <br>
+    <img src="discover.jpg" style="width:400px;height:300px;" height: 200px; weight : 200px;> <br>
     </td>
     <th></th>
     <th></th>
     <th></th>
     <td>Singing<br>
-    <img src="learn.jpg" style="width:400px;height:300px;"> <br>
+    <img src="learn.jpg" style="width:400px;height:300px;" height: 200px; weight : 200px;> <br>
     </td>
     <th></th>
     <th></th>
