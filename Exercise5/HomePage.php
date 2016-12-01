@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" type="text/css" href="Css.css">
 
-<h1>HTML //CSS //JAVA //PHP //<a href="index.php">SQL</a></h1>
+<h1><a href="index.php">SQL</a></h1>
 <style>
 #form {
 	font-size: 18px;
@@ -23,7 +23,7 @@ table { color : white;
 </style>
 </head>
 <hr>
-<body>
+<body style="background-image: url(bg.jpg);">
 <table border="0">
   <tr>
     <th>Name</th>

@@ -30,7 +30,7 @@ if(isset($_POST['btn-save']))
 <title>Add Data Page</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body style="background-image: url(background.jpg);">
+<body style="background-image: url(bg.jpg);">
 <center>
 
 <div id="header">
