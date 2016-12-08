@@ -86,13 +86,13 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
     <td class="t"> Neil </td>
     <ul><td class="t">
 	<li>Playing</li>
-	<img src = "url(C:\xampp\htdocs\exercise6\codeigniter\uploads\discover.jpg)"style="width:200px;height:100px;"> <br>
+	<img src = "/exercise6/codeigniter/uploads/discover.jpg"style="width:200px;height:100px;"> <br>
 	
 	<li>Guitar</li>
-	<img src= "url(C:\xampp\htdocs\exercise6\codeigniter\uploads\cook.jpg)" style="width:200px;height:100px;"> <br>
+	<img src= "/exercise6/codeigniter/uploads/cook.jpg" style="width:200px;height:100px;"> <br>
 	
 	<li>Singing</li>
-	<img src= "url(C:\xampp\htdocs\exercise6\codeigniter\uploads\learn.jpg)" style="width:200px;height:100px;"> <br>
+	<img src= "/exercise6/codeigniter/uploads/learn.jpg" style="width:200px;height:100px;"> <br>
 	
 	</td></ul>
     <td id="t">www.facebook.com/neilborlongan </td>
