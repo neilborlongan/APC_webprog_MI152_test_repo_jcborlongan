@@ -69,7 +69,8 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 
 <?php }?>
 			
-			<styleh1{
+	<style>
+	h1{
 font-size:20px;
 font-family:verdana;
 font-weight:bold;
