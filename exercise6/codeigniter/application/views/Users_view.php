@@ -26,6 +26,8 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 
 <body style="background-image: url(http://localhost/exercise6/codeigniter/uploads/bg.jpg);">
 	<div id="content">
+	
+	
 		<table align="center">
 			<tr>
 				<td colspan="9" align="center"> <a href="<?php echo base_url();?>index.php/users/add_form">Add user here.</a></td>
@@ -67,12 +69,20 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 
 <?php }?>
 			
-			
+			<styleh1{
+font-size:20px;
+font-family:verdana;
+font-weight:bold;
+color: white;
+background-color:black;
+}
+</style>
 		</table>
 	</div>
 </div>
 
 <center>
+<h1> About me! </h1>
 <table >
   <tr>
     <td>Fullname</td>
